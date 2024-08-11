@@ -50,7 +50,7 @@ jobs:
         with:
           repository: fleetdm/fleet
           fetch-depth: 1
-          ref: main
+          ref: victor/21239-vuln-cron-fail
           path: fleet
 
       - name: Setup Go
