@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - main
-  schedule:
-    - cron: '*/30 * * * *'
+#  schedule:
+#    - cron: '*/30 * * * *'
   workflow_dispatch:
     inputs:
       clean:
@@ -19,7 +19,7 @@ permissions:
 env:
   GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   VULNCHECK_API_KEY: ${{ secrets.VULNCHECK_API_KEY }}
-  VULNERABILITIES_CLEAN: ${{ github.event.inputs.clean || 'false' }}
+  VULNERABILITIES_CLEAN: ${{ github.event.inputs.clean || 'true' }}
 
 jobs:
   build:  
